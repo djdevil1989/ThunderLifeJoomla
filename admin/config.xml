@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+	<fields addfieldpath="/administrator/components/com_opensim/models/fields">
+		<fieldset name="display" label="GLOBAL_SETTINGS" description="GLOBAL_SETTINS_DESC">
+			<field type="text" name="opensim_host" size="30" label="HOST" description="HOST_TT" />
+			<field type="text" name="opensim_port" size="4" label="PORT" description="PORT_TT" />
+			<field type="jOpenSimHead" />
+		</fieldset>
+		<fieldset name="opensim" label="OPENSIMDB" description="OPENSIMDB_DESC">
+			<field type="text" name="opensim_dbhost" size="30" class="jopensim_config_label" label="OpenSim database hostname" description="SERVER1_DBHOST_TT" />
+			<field type="text" name="opensim_dbport" size="4" label="OpenSim database port" description="SERVER1_DBPORT_TT" />
+			<field type="text" name="opensim_dbuser" size="30" label="OpenSim database user" description="SERVER1_DB_USER_TT" />
+			<field type="password" name="opensim_dbpasswd" size="30" label="OpenSim database password" description="SERVER1_DB_PASSWD_TT" />
+			<field type="text" name="opensim_dbname" size="30" label="OpenSim database name" description="SERVER1_DB_NAME_TT" />
+		</fieldset>
+		<fieldset name="robust" label="OPENSIMGRIDDB" description="OPENSIMGRIDDB_DESC">
+			<field type="text" name="opensimgrid_dbhost" size="30" label="OpenSim database hostname" description="SERVER2_DBHOST_TT" />
+			<field type="text" name="opensimgrid_dbport" size="4" label="OpenSim database port" description="SERVER2_DBPORT_TT" />
+			<field type="text" name="opensimgrid_dbuser" label="OpenSim database user" description="SERVER2_DB_USER_TT" />
+			<field type="password" name="opensimgrid_dbpasswd" label="OpenSim database password" description="SERVER2_DB_PASSWD_TT" />
+			<field type="text" name="opensimgrid_dbname" size="30" label="OpenSim database name" description="SERVER2_DB_NAME_TT" />
+		</fieldset>
+		<fieldset name="userinit" label="JOPENSIM_USER" description="JOPENSIM_USERSETTING_DESC">
+			<field type="list" name="jopensim_defaultuserlevel" value="0" label="JOPENSIM_DEFAULTUSERLEVEL" description="JOPENSIM_DEFAULTUSERLEVEL_TT">
+				<option value="0">JOPENSIM_USERLEVEL_REGULAR</option>
+				<option value="100">JOPENSIM_USERLEVEL_MAINTENANCE</option>
+				<option value="200">JOPENSIM_USERLEVEL_GOD</option>
+				<option value="-1">JOPENSIM_USERLEVEL_DISABLED</option>
+			</field>
+			<field type="checkbox" name="jopensim_usersetting_flag3" value="4" label="JOPENSIM_USERSETTING_FLAG_PIOF" />
+			<field type="checkbox" name="jopensim_usersetting_flag4" value="8" label="JOPENSIM_USERSETTING_FLAG_PIU" />
+			<field type="checkbox" name="jopensim_usersetting_flag5" value="16" label="JOPENSIM_USERSETTING_FLAG_CO" />
+			<field type="checkbox" name="jopensim_usersetting_flag9" value="256" label="JOPENSIM_USERSETTING_FLAG_TRIAL" />
+			<field type="checkbox" name="jopensim_usersetting_flag10" value="512" label="JOPENSIM_USERSETTING_FLAG_CHARTERMEMBER" />
+			<field type="checkbox" name="jopensim_usersetting_flag11" value="1024" label="JOPENSIM_USERSETTING_FLAG_EMPLOYEE1" />
+			<field type="checkbox" name="jopensim_usersetting_flag12" value="2048" label="JOPENSIM_USERSETTING_FLAG_EMPLOYEE2" />
+			<field type="text" name="jopensim_usersetting_title" value="" label="JOPENSIM_USERSETTING_TITLE" description="JOPENSIM_USERSETTING_TITLE_DESC" />
+		</fieldset>
+		<fieldset name="groupsecurity" label="ADDONS_GROUPS">
+			<field type="text" name="grp_readkey" size="8" label="GRP_READKEY" description="GRP_READKEY_TT" />
+			<field type="text" name="grp_writekey" size="8" label="GRP_WRITEKEY" description="GRP_WRITEKEY_TT" />
+		</fieldset>
+		<fieldset name="remoteadmin" label="REMOTEADMIN">
+			<field type="list" name="enableremoteadmin" value="1" label="REMOTEADMINENABLE" description="REMOTEADMINENABLE_TT">
+				<option value="0">NO</option>
+				<option value="1">YES</option>
+			</field>
+			<field type="text" name="remotehost" size="30" label="REMOTEHOST" description="REMOTEHOST_TT" />
+			<field type="text" name="remoteport" size="4" label="REMOTEPORT" description="REMOTEPORT_TT" />
+			<field type="password" name="remotepasswd" label="REMOTEPASSWD" description="REMOTEPASSWD_TT" />
+		</fieldset>
+		<fieldset name="jopensimdebug" label="JOPENSIM_DEBUGGING" description="JOPENSIM_DEBUGGING_DESC">
+			<field type="checkbox" name="jopensim_debug_access" value="yes" label="JOPENSIM_DEBUG_ACCESS" description="JOPENSIM_DEBUG_ACCESS_DESC" />
+			<field type="checkbox" name="jopensim_debug_input" value="yes" label="JOPENSIM_DEBUG_INPUT" description="JOPENSIM_DEBUG_INPUT_DESC" />
+			<field type="checkbox" name="jopensim_debug_profile" value="yes" label="JOPENSIM_DEBUG_PROFILE" />
+			<field type="checkbox" name="jopensim_debug_groups" value="yes" label="JOPENSIM_DEBUG_GROUPS" />
+			<field type="checkbox" name="jopensim_debug_search" value="yes" label="JOPENSIM_DEBUG_SEARCH" />
+			<field type="checkbox" name="jopensim_debug_terminal" value="yes" label="JOPENSIM_DEBUG_TERMINAL" />
+			<field type="checkbox" name="jopensim_debug_messages" value="yes" label="JOPENSIM_DEBUG_MESSAGES" />
+			<field type="checkbox" name="jopensim_debug_currency" value="yes" label="JOPENSIM_DEBUG_MONEY" />
+			<field type="checkbox" name="jopensim_debug_other" value="yes" label="JOPENSIM_DEBUG_OTHER" />
+		</fieldset>
+		<fieldset name="permissions_LABEL" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+			<field name="rules" type="rules" component="com_opensim" filter="rules" label="COM_OPENSIM_FIELD_JCONFIG_PERMISSIONS_LABEL" section="component" description="COM_OPENSIM_FIELD_DESC"/>
+		</fieldset>
+	</fields>
+</config>

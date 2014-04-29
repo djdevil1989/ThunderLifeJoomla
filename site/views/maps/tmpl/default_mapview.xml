@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Map of Grid">
+		<message>Display a map of the entire grid</message>
+	</layout>
+</metadata>

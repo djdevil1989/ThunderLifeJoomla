@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="component" version="2.5">
+ <name>OpenSim</name>
+ <creationDate>2013-09-07</creationDate>
+ <author>FoTo50</author>
+ <authorEmail>foto50@jopensim.com</authorEmail>
+ <authorUrl>http://www.jopensim.com</authorUrl>
+ <copyright>All rights reserved by FoTo50 2013</copyright>
+ <license>GPL 2.0</license>
+ <version>0.2.8.1</version>
+ <description>Webinterface for OpenSim Servers (developed and tested with version 0.7.5 in Grid Mode)</description>
+ <!-- Install Database Section -->
+ <install>
+ 	<!-- Global component parameters -->
+ 	<params>
+ 		<param name="oshost" default="" />
+ 		<param name="osport" default="" />
+ 		<param name="osdbhost" default="" />
+ 		<param name="osdbport" default="3306" />
+ 		<param name="osdbname" default="" />
+ 		<param name="osdbpasswd" default="" />
+ 		<param name="osdbuser" default="" />
+ 		<param name="enableremoteadmin" default="0" />
+ 		<param name="remotehost" default="" />
+ 		<param name="remoteport" default="" />
+ 		<param name="remotepasswd" default="" />
+ 		<param name="grp_readkey" default="" />
+ 		<param name="grp_writekey" default="" />
+ 	</params>
+ </install>
+
+ <!-- Custom Install Script to execute -->
+ <installfile>opensim.install.php</installfile>
+ <uninstallfile>opensim.uninstall.php</uninstallfile>
+
+ <files folder="site">
+  <filename>controller.php</filename>
+  <filename>currency.php</filename>
+  <filename>currency.log</filename>
+  <filename>currency.phplandtool.php</filename>
+  <filename>index.html</filename>
+  <filename>interface.log</filename>
+  <filename>interface.php</filename>
+  <filename>landtool.php</filename>
+  <filename>opensim.php</filename>
+  <filename>registersearch.php</filename>
+  <filename>terminal.log</filename>
+  <filename>xmlrpc.log</filename>
+  <folder>assets</folder>
+  <folder>controllers</folder>
+  <folder>includes</folder>
+  <folder>models</folder>
+  <folder>views</folder>
+  <folder>xmlrpc</folder>
+ </files>
+
+ <languages>
+  <language tag="en-GB">langfiles/site/en-GB/en-GB.com_opensim.ini</language>
+ </languages>
+
+ <administration>
+  <!-- Administration Menu Section -->
+  <menu img="components/com_opensim/assets/images/icon-16-opensim.png" link="option=com_opensim">JOPENSIM_MENU_NAME</menu>
+  <submenu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-control-panel.png" view="opensimcp" link="option=com_opensim">JOPENSIM_MENU_OVERVIEW</menu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-config.png" view="settings" link="option=com_opensim&amp;view=settings">JOPENSIM_MENU_SETTINGS</menu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-login.png" view="loginscreen" link="option=com_opensim&amp;view=loginscreen">JOPENSIM_MENU_LOGINSCREEN</menu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-maps.png" view="maps" link="option=com_opensim&amp;view=maps">JOPENSIM_MENU_MAPS</menu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-user.png" view="user" link="option=com_opensim&amp;view=user">JOPENSIM_MENU_USER</menu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-group.png" view="groups" link="option=com_opensim&amp;view=groups">JOPENSIM_MENU_GROUPS</menu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-search.png" view="search" link="option=com_opensim&amp;view=search">JOPENSIM_MENU_SEARCH</menu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-money.png" view="money" link="option=com_opensim&amp;view=money">JOPENSIM_MENU_MONEY</menu>
+  	<menu img="components/com_opensim/assets/images/icon-16-os-misc.png" view="misc" link="option=com_opensim&amp;view=misc">JOPENSIM_MENU_MISC</menu>
+  </submenu>
+  <!-- Administration Main File Copy Section -->
+  <files folder="admin">
+   <filename>access.xml</filename>
+   <filename>config.xml</filename>
+   <filename>controller.php</filename>
+   <filename>index.html</filename>
+   <filename>licence.php</filename>
+   <filename>opensim.php</filename>
+   <folder>assets</folder>
+   <folder>controllers</folder>
+   <folder>elements</folder>
+   <folder>lsl-scripts</folder>
+   <folder>models</folder>
+   <folder>opensim_modules</folder>
+   <folder>tables</folder>
+   <folder>views</folder>
+  </files>
+  <languages>
+   <language tag="en-GB">langfiles/admin/en-GB/en-GB.com_opensim.ini</language>
+   <language tag="en-GB">langfiles/admin/en-GB/en-GB.com_opensim.sys.ini</language>
+  </languages>
+ </administration>
+ <updateservers>
+	<server type="extension" priority="1" name="jOpenSim Update Site">http://www.jopensim.com/opensim/update/jopensim-update.xml</server>
+ </updateservers>
+</extension>

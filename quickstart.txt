@@ -1,0 +1,82 @@
+; jOpenSim 0.2.7
+;
+;
+; To get Profile and Search working, you need to copy 2 files into your OpenSimulator bin-folder:
+;
+; jOpenSim.Profile.dll
+; jOpenSim.Search.dll
+;
+; you find them in /path-to-your-joomla/administrator/components/com_opensim/opensim_modules after installation
+;
+;
+;
+; This quickstart is just for insiders, newbies should read the readme.pdf ;)
+;
+; Most is as it was in previous releases
+;
+; Here is just the new stuff for a quick start:
+;
+; Search:
+;
+; in OpenSim.ini add:
+;
+
+[DataSnapshot]
+...
+	data_services="http://path-to-your-joomla/components/com_opensim/registersearch.php"
+
+[Search]
+	SearchURL = http://path-to-your-joomla/components/com_opensim/interface.php
+
+; to enable web search (works only with imprudence, kokua and singularity viewers,...
+; add to Robust.ini:
+
+[LoginService]
+	SearchURL = "http://path-to-your-joomla/index.php?option=com_opensim&view=inworldsearch&task=viewersearch&tmpl=component&"
+
+; the & at the end is important here for sending the parameters correct to jOpenSim
+
+
+
+;
+; Profile:
+; The Section [Profile] has to move from OpenSim.ini to the end of your included .ini file (e.g. GridCommon.ini) like:
+;
+
+[Profile]
+	ProfileURL = http://path-to-your-joomla/components/com_opensim/interface.php
+	Module = "jOpenSimProfile"
+
+; The line Module is important to add without changes!!!
+
+
+; Groups:
+; There is actually nothing new in the ini files:
+
+[Groups]
+    Enabled = true
+    Module = GroupsModule
+    MessagingEnabled = true
+    MessagingModule = GroupsMessagingModule
+    ServicesConnectorModule = XmlRpcGroupsServicesConnector
+    GroupsServerURI = "http://path-to-your-joomla/components/com_opensim/interface.php"
+    NoticesEnabled = true
+    XmlRpcServiceReadKey    = 1234
+    XmlRpcServiceWriteKey   = 1234
+
+; Messaging:
+; for offline messages, also no changes to the last version are required:
+
+[Messaging]
+    OfflineMessageModule = OfflineMessageModule
+    OfflineMessageURL = http://path-to-your-joomla/components/com_opensim/interface.php
+    MuteListModule = MuteListModule
+    MuteListURL = http://path-to-your-joomla/components/com_opensim/interface.php
+    ForwardOfflineGroupMessages = true
+
+
+; jOpenSim
+;
+; Dont forget, that the Addon's must be enabled in jOpenSim's settings to get them responding to your OpenSimulator
+;
+;

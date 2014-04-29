@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Event List">
+		<help url="JOPENSIM_HELP_EVENTLIST" key="JOPENSIM_HELP_EVENTLIST" />
+		<message>Lists all events</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="EVENTACCESS">
+			<field type="list" name="access_level" value="1" label="EVENTPOSTACCESS" description="EVENTPOSTACCESS_TT">
+				<option value="1">Registered (only on public regions)</option>
+				<option value="2">Group members with special rights (see advanced)</option>
+				<option value="3" description="das ist eine Beschreibung">Group/Land Owners</option>
+			</field>
+		</fieldset>
+		<fieldset name="EVENTADVANCED">
+			<field name="group_access" type="list" default="OPT1" multiple="multiple" label="EVENTGROUPACCESS" description="EVENTGROUPACCESS_TT">
+				<option value="OPT1">EVENTGROUPACCESS_OPT1</option>
+				<option value="OPT2">EVENTGROUPACCESS_OPT2</option>
+				<option value="OPT3">EVENTGROUPACCESS_OPT3</option>
+				<option value="OPT4">EVENTGROUPACCESS_OPT4</option>
+			</field>
+		</fieldset>
+	</fields>
+	<help url="JOPENSIM_HELP_EVENTLIST" key="JOPENSIM_HELP_EVENTLIST" />
+</metadata>
